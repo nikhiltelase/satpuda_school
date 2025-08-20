@@ -15,7 +15,7 @@ Yesterday we said the controller is like the brain of our system. Let's understa
 A controller is a **small computer**, also called a **Microcontroller**. It has its own memory, processing power, and input/output pins. It's just like our brain that can think and make decisions.
 
 **Real Example:** Just like your brain decides to wear a sweater when it's cold, a controller decides to turn on a fan when the temperature is too high.
-**[IMAGE: ![Human brain and microcontroller similarity](brain.png)]**
+**[IMAGE: ![Human brain and microcontroller similarity](images/brain.png)]**
 ### Why Do We Need Controllers?
 Without a controller, our system can't do anything. Sensors can collect data, but only the controller can decide what to do with that data.
 
@@ -33,7 +33,7 @@ INPUT → PROCESS → OUTPUT
 Sensor Data → Controller Decision → Actuator Action
 ```
 
-**[IMAGE: ![Workflow diagram showing data flowing from sensor to controller to actuator](workflow.png)]**
+**[IMAGE: ![Workflow diagram showing data flowing from sensor to controller to actuator](images/workflow.png)]**
 
 ---
 
@@ -44,7 +44,7 @@ We will use the **NodeMCU ESP8266** microcontroller board in this workshop.
 ### What is it?
 NodeMCU is a popular, low-cost microcontroller board that has an **ESP8266 chip** inside. It's a small circuit board that will become the brain of our projects.
 
-![NodeMCU ESP8266 board with labeled pins and components](nodemcu.png)
+![NodeMCU ESP8266 board with labeled pins and components](images/nodemcu.png)
 
 ### Why Are We Using This?
 
@@ -69,7 +69,7 @@ This is like "Hello, World!" in programming. We will make the small light (LED) 
 - NodeMCU ESP8266 Board
 - Micro-USB Cable (that supports data transfer)
 - Computer/Laptop
-**[IMAGE: ![All required components laid out on table with labels](components.png)]**
+**[IMAGE: ![All required components laid out on table with labels](images/components.png)]**
 
 ---
 
@@ -87,7 +87,7 @@ This is like "Hello, World!" in programming. We will make the small light (LED) 
 1. Go to Arduino Software website (arduino.cc)
 2. Download the installer for your operating system (Windows/Mac)
 
-![Arduino.cc website download page](arduinoDownload.png)
+![Arduino.cc website download page](images/arduinoDownload.png)
 
 3. Open the downloaded file and install it
 4. After installation, open Arduino IDE
@@ -105,7 +105,7 @@ This is like "Hello, World!" in programming. We will make the small light (LED) 
 **How to install:**
 1. Search online for CH340 driver and download it
 
-![Google search results for CH340 driver download](driver.png)
+![Google search results for CH340 driver download](images/driver.png)
 
 2. Extract the file and run the installer as **Administrator**
 3. Restart your computer after installation
@@ -128,21 +128,21 @@ This is like "Hello, World!" in programming. We will make the small light (LED) 
 1. Open Arduino IDE
 2. Go to `File` > `Preferences`
 
-![Arduino IDE File menu with Preferences highlighted](file.png)
+![Arduino IDE File menu with Preferences highlighted](images/file.png)
 
 3. In the "Additional Board Manager URLs" box, paste this link:
    ```
    http://arduino.esp8266.com/stable/package_esp8266com_index.json
    ```
 
-![Preferences dialog box with Board Manager URLs field highlighted](additionalManager.png)
+![Preferences dialog box with Board Manager URLs field highlighted](images/additionalManager.png)
 
 **What does this link do?** This link tells Arduino IDE where to find all the information about ESP8266 on the internet. Like giving someone an address where they can find ESP8266 information.
 
 4. Click `OK`
 5. Now go to `Tools` > `Board` > `Boards Manager...`
 
-![Preferences dialog box with Board Manager URLs field highlighted](board.png)
+![Preferences dialog box with Board Manager URLs field highlighted](images/board.png)
 
 
 6. Type "esp8266" in the search box
@@ -165,7 +165,7 @@ This is like "Hello, World!" in programming. We will make the small light (LED) 
 2. In Arduino IDE, go to `Tools` > `Board` > `ESP8266 Boards` and select **"NodeMCU 1.0 (ESP-12E Module)"**
 
 
-![NodeMCU connected to laptop with USB cable](selectBoard.png)
+![NodeMCU connected to laptop with USB cable](images/selectBoard.png)
 
 **Port Selection:**
 3. Now go to `Tools` > `Port`. You will see a COM port (like COM3, COM4). Select it.
@@ -186,7 +186,7 @@ This is like "Hello, World!" in programming. We will make the small light (LED) 
 **What are GPIO Pins?**
 GPIO means **General Purpose Input/Output**. These are physical pins on the board where we can connect sensors (input) and actuators (output). 
 
-![NodeMCU pinout diagram with all pins labeled clearly](esp8266PIns.png)
+![NodeMCU pinout diagram with all pins labeled clearly](images/esp8266PIns.png)
 
 On NodeMCU, these pins have names written on the board itself, like D1, D2, D3, D4, etc.
 
@@ -194,7 +194,7 @@ On NodeMCU, these pins have names written on the board itself, like D1, D2, D3, 
 
 **Important:** The blue LED on the board is connected to pin **D4**. We will use this name (D4) in our code because it's clearly visible on the board and easy to understand.
 
-![NodeMCU board with D4 pin and blue LED highlighted with arrows](led.png)
+![NodeMCU board with D4 pin and blue LED highlighted with arrows](images/led.png)
 
 ---
 
