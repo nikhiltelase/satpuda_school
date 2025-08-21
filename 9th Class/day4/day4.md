@@ -32,15 +32,11 @@ Without actuators, a robot or IoT device can sense and think, but it can't do an
 
 **Where is it used?** Indicators on all electronics, lighting, displays.
 
-*[Image Placeholder: Prompt: "A close-up photo of a glowing red LED."]*
-
 ### DC Motor
 
 **What is it?** A DC motor spins continuously when you give it power. You can change its direction, but you can't easily control its exact position.
 
 **Where is it used?** Toy cars, fans, robot wheels.
-
-*[Image Placeholder: Prompt: "A clear, high-quality photo of a small DC motor with two wires."]*
 
 ### Servo Motor
 
@@ -48,15 +44,11 @@ Without actuators, a robot or IoT device can sense and think, but it can't do an
 
 **Where is it used?** Robotic arms, airplane flaps, automatic gates, and steering systems.
 
-*[Image Placeholder: Prompt: "A clear, high-quality photo of a blue SG90 micro servo motor."]*
-
 ### Buzzer
 
 **What is it?** A buzzer is a tiny speaker that produces a buzzing sound or a beep when it receives a signal.
 
 **Where is it used?** Alarms, doorbells, timers, and giving feedback in projects.
-
-*[Image Placeholder: Prompt: "A clear, high-quality photo of a small black electronic buzzer."]*
 
 ## 4. An Important Helper: The Motor Driver
 
@@ -69,8 +61,6 @@ Motors, especially DC motors, need more electrical current (power) to run than a
 ### What about Servo Motors?
 
 Servo motors have a small driver circuit built inside them! That's why we can connect our small SG90 servo directly to the NodeMCU. The internal circuit handles the power management for us.
-
-*[Image Placeholder: Prompt: "A photo of an L298N motor driver module, a common type used in hobby robotics."]*
 
 ## 5. Hands-on Activity: Controlling a Servo Motor
 
@@ -87,10 +77,10 @@ We will now connect a servo motor to our NodeMCU and write code to control its a
 The Servo Motor has 3 wires:
 
 - **Brown Wire (GND)** → Connect to a GND pin on the NodeMCU.
-- **Red Wire (VCC)** → Connect to the Vin pin on the NodeMCU (for 5V power).
+- **Red Wire (VCC)** → Connect to the VV pin on the NodeMCU (for 5V power).
 - **Orange Wire (Signal)** → Connect to the D4 pin on the NodeMCU.
 
-*[Image Placeholder: Prompt: "A clear and simple circuit diagram showing a NodeMCU connected to an SG90 servo motor."]*
+![Servo with NodeMCU connection](images/servo-with-nodemcu.png)
 
 ## Programming the Servo 💻
 
@@ -144,7 +134,7 @@ Let's combine Day 3 and Day 4! We will build a smart barrier that opens automati
 ### Connections:
 Keep the connections for both the IR sensor on pin D1 and the Servo Motor on pin D4.
 
-*[Image Placeholder: Prompt: "A circuit diagram showing a NodeMCU connected to both an IR sensor and a servo motor."]*
+![IR Sensor and Servo with NodeMCU connection](images/ir-servo-with-nodemcu.png)
 
 ### Write the Code:
 This code combines the logic from both days.
@@ -186,5 +176,3 @@ void loop() {
 Upload this code. Now, the servo will stay at 0 degrees (gate closed). When you bring your hand in front of the IR sensor, the servo will move to 90 degrees (gate open)! When you move your hand away, it will close again.
 
 **You have now built a complete, smart system that can Sense, Think, and Act!**
-
-*[GIF Placeholder: Prompt: "A GIF showing a hand moving towards an IR sensor, causing a servo motor with a small paper barrier attached to rotate 90 degrees."]*
