@@ -366,11 +366,12 @@ void controlMotion(int y, int x) {
 ### How to Use It
 
 1. **Upload the Code:** Make sure all your connections are correct and upload this code to your NodeMCU.
-2. **Connect Your Phone:** On your smartphone, go to Wi-Fi settings. You will see a new network named `connect_robo`. Connect to it using the password `12345678`.
+2. **Connect Your Phone:** On your smartphone, go to Wi-Fi settings. You will see a new network named `wifi-car-1`. Connect to it using the password `12345678`.
 3. **Use the Controller App:** Open the "connect_robo" app on your phone.
-4. **Configure the App:**
-    - Set the IP Address to `192.168.4.1` (the NodeMCU's address).
-    - Set the Port to `4210`.
+4. **Connect the App:**
+    - Click on connect button.
+    - Move left joysticks to up and down 
+    - Move right joysticks to left and right
 5. **Drive!** You can now control your robot car using the joystick on your phone!
 
 ---
